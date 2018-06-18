@@ -281,11 +281,9 @@ axis([0 3000 0 1.5*10^8]);
 
 %%% Comparing Dependent Variables
 
-% No Treatment
-
-% Single Inhibitor Dose
 figure;
 
+% No Treatment
 subplot(1,2,1);
 plot(t_grid_full_long,B_Free_sol_NT_long,'k--'); hold on;
 plot(t_grid_full_long,B_Bound_sol_NT_long,'b');
@@ -296,6 +294,7 @@ ylabel('num. cells/sites');
 xlim([0 1500]);
 ylim([0 1.5*10^8]);
 
+% Single Inhibitor Dose
 subplot(1,2,2);
 plot(t_grid_full_long,B_Free_sol_Treat_long,'k--'); hold on;
 plot(t_grid_full_long,B_Bound_sol_Treat_long,'b');
@@ -313,10 +312,11 @@ ylim([0 1.5*10^8]);
 
 figure;
 
+% With regular debridement and inhibitor dosing scenarios
 subplot(1,2,1);
-plot(t_grid_full_long,B_T_NT_long,'k--'); hold on; % t_grid_full_D B_T_NT_medium
+plot(t_grid_full_long,B_T_NT_long,'k--'); hold on;
 plot(t_grid_full_D,B_Total_D_NT,'b-.');
-plot(t_grid_full_long,B_T_Treat_long,'r'); % t_grid_full_D B_T_Treat_medium
+plot(t_grid_full_long,B_T_Treat_long,'r');
 plot(t_grid_full_D,B_Total_D_Treat,'g');
 plot(t_grid_full_D,B_Total_ND_Treat_Reg_NC,'m:');
 plot(t_grid_full_D,B_Total_D_Treat_Reg,'c');
@@ -327,10 +327,11 @@ legend('No Treatment','Reg. Deb.','Inhib.',...
 xlim([0 2000]);
 ylim([0 1.5*10^8]);
 
+% WIth constant debridement scenario
 subplot(1,2,2);
-plot(t_grid_full_long,B_T_NT_long,'k--'); hold on; % t_grid_full_D B_T_NT_medium
+plot(t_grid_full_long,B_T_NT_long,'k--'); hold on;
 plot(t_grid_full_D,B_T_CD_NT,'b-.');
-plot(t_grid_full_long,B_T_Treat_long,'r'); % t_grid_full_D B_T_Treat_medium
+plot(t_grid_full_long,B_T_Treat_long,'r');
 plot(t_grid_full_D,B_T_CD_Treat,'g');
 xlabel('time, t (hr)');
 ylabel(['total num. bacteria,',sprintf('\n'),' B_T (cells)']);
