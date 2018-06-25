@@ -1,6 +1,8 @@
 # Inhibitor_Model
 Matlab files associated with the paper: 'Predictive Modelling of a Novel Anti-adhesion Therapy to Combat Bacterial Colonisation of Burn Wounds'
 
+https://zenodo.org/badge/137582957.svg
+
 This folder contains the following files:
 
 1. Command_Line_Inhibitor_Simulations_and_Plots.m: Open this file to run simulations and plot the figures. On line 36 of this code you can choose the parameter set (between 1 and 12) for which the equations are solved.
